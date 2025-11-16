@@ -14,8 +14,10 @@ filetype indent on
 
 
 call plug#begin()
+	Plug 'ryanoasis/vim-devicons'
     Plug 'ghifarit53/tokyonight-vim'
     Plug 'preservim/nerdtree'
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
 
 set termguicolors
@@ -30,3 +32,7 @@ colorscheme tokyonight
 
 " NerdTree
 nnoremap <C-t> :NERDTreeToggle<CR>
+
+if exists('g:loaded_webdevicons')
+    call webdevicons#refresh()
+endif
