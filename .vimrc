@@ -6,6 +6,7 @@ set si
 set cursorline
 
 set incsearch
+inoremap [ []<Esc>i
 inoremap ( ()<Esc>i
 inoremap " ""<Esc>
 inoremap ' ''<Esc>
@@ -19,6 +20,7 @@ call plug#begin()
     Plug 'preservim/nerdtree'
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'scrooloose/syntastic'
+	Plug 'tpope/vim-commentary'
 call plug#end()
 
 set termguicolors
@@ -61,3 +63,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers=['flake8']
 
 let g:syntastic_check_on_open = 1
+
+"
+let &t_EI = "\033[1 q" " NORMAL
+let &t_SI = "\033[5 q" " INSERT
