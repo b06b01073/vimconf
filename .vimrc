@@ -1,6 +1,5 @@
 set tabstop=4
 set shiftwidth=4
-
 set relativenumber
 set ai
 set si
@@ -18,6 +17,7 @@ call plug#begin()
     Plug 'ghifarit53/tokyonight-vim'
     Plug 'preservim/nerdtree'
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+	Plug 'scrooloose/syntastic'
 call plug#end()
 
 set termguicolors
@@ -36,3 +36,27 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 if exists('g:loaded_webdevicons')
     call webdevicons#refresh()
 endif
+
+
+" Enable Syntastic statusline flag
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" Always populate the location list with errors
+let g:syntastic_always_populate_loc_list = 1
+
+" Auto-open location list if errors are found
+let g:syntastic_auto_loc_list = 1
+
+" Check on file open (can be set to 0 for large files)
+let g:syntastic_check_on_open = 1
+
+" Check on write/quit (can be set to 0 for large files)
+let g:syntastic_check_on_wq = 0
+
+" Use flake8 for Python checking
+" pip install flake8 first, and add the package to PATH
+let g:syntastic_python_checkers=['flake8']
+
+let g:syntastic_check_on_open = 1
