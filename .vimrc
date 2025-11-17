@@ -21,6 +21,7 @@ call plug#begin()
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'scrooloose/syntastic'
 	Plug 'tpope/vim-commentary'
+	Plug 'psliwka/vim-smoothie'
 call plug#end()
 
 set termguicolors
