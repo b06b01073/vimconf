@@ -3,6 +3,7 @@ set shiftwidth=4
 set relativenumber
 set ai
 set si
+set cursorline
 
 set incsearch
 inoremap ( ()<Esc>i
