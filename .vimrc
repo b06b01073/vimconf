@@ -22,6 +22,7 @@ call plug#begin()
 	Plug 'scrooloose/syntastic'
 	Plug 'tpope/vim-commentary'
 	Plug 'psliwka/vim-smoothie'
+	Plug 'vim-airline/vim-airline'
 call plug#end()
 
 set termguicolors
