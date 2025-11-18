@@ -23,6 +23,7 @@ call plug#begin()
 	Plug 'tpope/vim-commentary'
 	Plug 'psliwka/vim-smoothie'
 	Plug 'vim-airline/vim-airline'
+	Plug 'tpope/vim-surround'
 call plug#end()
 
 set termguicolors
